@@ -40,10 +40,6 @@ local.properties
 *.code-workspace
 .history/
 
-# Cursor
-.cursor/
-.cursor-server/
-
 # Local configuration file
 local.properties
 
