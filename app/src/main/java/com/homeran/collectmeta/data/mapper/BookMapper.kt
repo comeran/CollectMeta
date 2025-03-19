@@ -1,83 +1,117 @@
 package com.homeran.collectmeta.data.mapper
 
-import com.homeran.collectmeta.data.db.entities.BookDetailsEntity
-import com.homeran.collectmeta.data.db.entities.BookWithDetails
-import com.homeran.collectmeta.data.db.entities.MediaEntity
-import com.homeran.collectmeta.data.db.entities.MediaType
+import com.homeran.collectmeta.data.db.entities.BookEntity
 import com.homeran.collectmeta.domain.model.Book
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.homeran.collectmeta.domain.model.ReadingStatus
 
 /**
- * 转换函数 - 将数据库实体转换为领域模型
+ * 书籍数据映射器
+ * 负责在数据库实体和领域模型之间进行转换
  */
-fun BookWithDetails.toDomainModel(): Book {
-    val gson = Gson()
-    return Book(
-        id = this.media.id,
-        title = this.media.title,
-        originalTitle = this.media.originalTitle,
-        year = this.media.year,
-        cover = this.media.cover,
-        description = this.media.description,
-        rating = this.media.rating,
-        overallRating = this.media.overallRating,
-        genres = gson.fromJson(this.media.genres, object : TypeToken<List<String>>() {}.type),
-        lastModified = this.media.lastModified,
-        notionPageId = this.media.notionPageId,
-        status = this.media.status,
-        userRating = this.media.userRating,
-        userComment = this.media.userComment,
-        userTags = gson.fromJson(this.media.userTags, object : TypeToken<List<String>>() {}.type),
-        doubanUrl = this.media.doubanUrl,
-        createdAt = this.media.createdAt,
-        author = this.bookDetails.author,
-        isbn = this.bookDetails.isbn,
-        pages = this.bookDetails.pages,
-        publisher = this.bookDetails.publisher,
-        recommendationSource = this.bookDetails.recommendationSource,
-        filePath = this.bookDetails.filePath
-    )
+object BookMapper {
+    /**
+     * 将数据库实体转换为领域模型
+     */
+    fun toDomain(entity: BookEntity): Book {
+        return Book(
+            id = entity.id,
+            cover = entity.cover,
+            category = entity.category,
+            date = entity.date,
+            personalRating = entity.personalRating,
+            author = entity.author,
+            publisher = entity.publisher,
+            readingStatus = entity.status.toDomain(),
+            doubanRating = entity.doubanRating,
+            overallRating = entity.overallRating,
+            pageCount = entity.pageCount,
+            doubanUrl = entity.doubanUrl,
+            fileAttachment = entity.fileAttachment,
+            isbn = entity.isbn,
+            createdAt = entity.createdAt,
+            recommendationReason = entity.recommendationReason,
+            title = entity.title,
+            chineseTitle = entity.chineseTitle,
+            originalTitle = entity.originalTitle,
+            translator = entity.translator,
+            description = entity.description,
+            series = entity.series,
+            binding = entity.binding,
+            price = entity.price,
+            publishDate = entity.publishDate,
+            lastModified = entity.lastModified
+        )
+    }
+
+    /**
+     * 将领域模型转换为数据库实体
+     */
+    fun toEntity(domain: Book): BookEntity {
+        return BookEntity(
+            id = domain.id,
+            cover = domain.cover,
+            category = domain.category,
+            date = domain.date,
+            personalRating = domain.personalRating,
+            author = domain.author,
+            publisher = domain.publisher,
+            status = domain.readingStatus.toEntity(),
+            doubanRating = domain.doubanRating,
+            overallRating = domain.overallRating,
+            pageCount = domain.pageCount,
+            doubanUrl = domain.doubanUrl,
+            fileAttachment = domain.fileAttachment,
+            isbn = domain.isbn,
+            createdAt = domain.createdAt,
+            recommendationReason = domain.recommendationReason,
+            title = domain.title,
+            chineseTitle = domain.chineseTitle,
+            originalTitle = domain.originalTitle,
+            translator = domain.translator,
+            description = domain.description,
+            series = domain.series,
+            binding = domain.binding,
+            price = domain.price,
+            publishDate = domain.publishDate,
+            lastModified = domain.lastModified
+        )
+    }
+
+    /**
+     * 将数据库实体列表转换为领域模型列表
+     */
+    fun toDomainList(entities: List<BookEntity>): List<Book> {
+        return entities.map { toDomain(it) }
+    }
+
+    /**
+     * 将领域模型列表转换为数据库实体列表
+     */
+    fun toEntityList(domains: List<Book>): List<BookEntity> {
+        return domains.map { toEntity(it) }
+    }
 }
 
 /**
- * 转换函数 - 将领域模型转换为媒体实体
+ * 将数据库层的ReadingStatus转换为领域层的ReadingStatus
  */
-fun Book.toMediaEntity(): MediaEntity {
-    val gson = Gson()
-    return MediaEntity(
-        id = this.id,
-        type = MediaType.BOOK,
-        title = this.title,
-        originalTitle = this.originalTitle,
-        year = this.year,
-        cover = this.cover,
-        description = this.description,
-        rating = this.rating,
-        overallRating = this.overallRating,
-        genres = gson.toJson(this.genres),
-        lastModified = this.lastModified,
-        notionPageId = this.notionPageId,
-        status = this.status,
-        userRating = this.userRating,
-        userComment = this.userComment,
-        userTags = gson.toJson(this.userTags),
-        doubanUrl = this.doubanUrl,
-        createdAt = this.createdAt
-    )
+private fun com.homeran.collectmeta.data.db.entities.ReadingStatus.toDomain(): ReadingStatus {
+    return when (this) {
+        com.homeran.collectmeta.data.db.entities.ReadingStatus.WANT_TO_READ -> ReadingStatus.WANT_TO_READ
+        com.homeran.collectmeta.data.db.entities.ReadingStatus.READING -> ReadingStatus.READING
+        com.homeran.collectmeta.data.db.entities.ReadingStatus.READ -> ReadingStatus.READ
+        com.homeran.collectmeta.data.db.entities.ReadingStatus.ABANDONED -> ReadingStatus.ABANDONED
+    }
 }
 
 /**
- * 转换函数 - 将领域模型转换为书籍详情实体
+ * 将领域层的ReadingStatus转换为数据库层的ReadingStatus
  */
-fun Book.toBookDetailsEntity(): BookDetailsEntity {
-    return BookDetailsEntity(
-        mediaId = this.id,
-        author = this.author,
-        isbn = this.isbn,
-        pages = this.pages,
-        publisher = this.publisher,
-        recommendationSource = this.recommendationSource,
-        filePath = this.filePath
-    )
+private fun ReadingStatus.toEntity(): com.homeran.collectmeta.data.db.entities.ReadingStatus {
+    return when (this) {
+        ReadingStatus.WANT_TO_READ -> com.homeran.collectmeta.data.db.entities.ReadingStatus.WANT_TO_READ
+        ReadingStatus.READING -> com.homeran.collectmeta.data.db.entities.ReadingStatus.READING
+        ReadingStatus.READ -> com.homeran.collectmeta.data.db.entities.ReadingStatus.READ
+        ReadingStatus.ABANDONED -> com.homeran.collectmeta.data.db.entities.ReadingStatus.ABANDONED
+    }
 } 

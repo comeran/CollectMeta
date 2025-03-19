@@ -1,33 +1,45 @@
 package com.homeran.collectmeta.domain.model
 
-import com.homeran.collectmeta.data.db.entities.MediaStatus
+import java.util.Date
 
 /**
- * 书籍领域模型，代表业务逻辑层的书籍数据结构
+ * 书籍领域模型
  */
 data class Book(
     val id: String,
-    val title: String,
-    val originalTitle: String,
-    val year: Int,
-    val cover: String,
-    val description: String,
-    val rating: Float,
-    val overallRating: Float,
-    val genres: List<String>,
-    val lastModified: Long,
-    val notionPageId: String?,
-    val status: MediaStatus,
-    val userRating: Float?,
-    val userComment: String?,
-    val userTags: List<String>,
-    val doubanUrl: String?,
-    val createdAt: Long,
-    // 书籍特有属性
+    val cover: String?,
+    val category: String?,
+    val date: String?,
+    val personalRating: Float?,
     val author: String,
-    val isbn: String,
-    val pages: Int,
-    val publisher: String,
-    val recommendationSource: String?,
-    val filePath: String?
-) 
+    val publisher: String?,
+    val readingStatus: ReadingStatus,
+    val doubanRating: Float?,
+    val overallRating: Float?,
+    val pageCount: Int?,
+    val doubanUrl: String?,
+    val fileAttachment: String?,
+    val isbn: String?,
+    val createdAt: String,
+    val recommendationReason: String?,
+    val title: String,
+    val chineseTitle: String?,
+    val originalTitle: String?,
+    val translator: String?,
+    val description: String?,
+    val series: String?,
+    val binding: String?,
+    val price: String?,
+    val publishDate: String?,
+    val lastModified: Long
+)
+
+/**
+ * 书籍阅读状态枚举
+ */
+enum class ReadingStatus {
+    WANT_TO_READ, // 想读（橙色）
+    READING,      // 在读（蓝色）
+    READ,         // 读过（绿色）
+    ABANDONED     // 放弃（红色）
+} 
