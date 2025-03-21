@@ -1,3 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CollectMeta</string>
+    <string name="welcome_subtitle">Your Personal Media Collection</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_description">Start collecting and organizing your favorite books, movies, TV shows, and games in one place.</string>
+    <!-- Search Results Strings -->
+    <string name="back">Back</string>
+    <string name="filter">Filter</string>
+    <string name="book_cover">Book Cover</string>
+    <string name="save">Save</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="try_different_search">Try a different search query or check your spelling</string>
+    <string name="error_occurred">An Error Occurred</string>
+    <string name="check_connection">Please check your internet connection and try again</string>
+    <string name="retry">Retry</string>
+    <string name="results_count">%d results</string>
+    <!-- Plurals -->
+    <plurals name="results_count">
+        <item quantity="one">%d result</item>
+        <item quantity="other">%d results</item>
+    </plurals>
+    <!-- Navigation Labels -->
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="settings">Settings</string>
+    <string name="search_results">Search Results</string>
+    <string name="search_type">Search Type</string>
+    <!-- Search UI Strings -->
+    <string name="search">Search</string>
+    <string name="select_category">Select a category to search</string>
+    <string name="books">Books</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="games">Games</string>
+    <string name="search_books_hint">Search for books…</string>
+    <string name="recent_searches">Recent Searches</string>
+    <!-- Book Detail Screen -->
+    <string name="book_details">Book Details</string>
+    <string name="reading_stats">Reading Stats</string>
+    <string name="save_to_notion">Save to Notion</string>
+    <!-- Save Confirmation Screen -->
+    <string name="successfully_saved">Successfully Saved!</string>
+    <string name="sync_to_notion_message">Your book has been synced to Notion</string>
+    <string name="view_in_notion">View in Notion</string>
+    <string name="continue_browsing">Continue Browsing</string>
+    <string name="sync_progress">Sync Progress</string>
+    <string name="syncing_metadata">Syncing metadata…</string>
+    <string name="updating_database">Updating Notion database…</string>
+    <string name="sync_completed">Sync completed successfully</string>
+    <!-- Library Screen -->
+    <string name="my_library">My Library</string>
+    <string name="all">All</string>
+    <string name="books_count">%d Books</string>
+    <string name="movies_count">%d Movies</string>
+    <string name="tv_shows_count">%d TV Shows</string>
+    <!-- Settings Screen -->
+    <string name="notion_integration">Notion Integration</string>
+    <string name="connected_as">Connected as %s</string>
+    <string name="select_database">Select Database</string>
+    <string name="api_keys">API Keys</string>
+    <string name="openlibrary">OpenLibrary</string>
+    <string name="google_books">Google Books</string>
+    <string name="enter_api_key">Enter API Key</string>
+    <string name="features">Features</string>
+    <string name="auto_sync">Auto-sync with Notion</string>
+    <string name="track_reading_progress">Track Reading Progress</string>
+    <string name="include_ratings">Include Ratings</string>
+    <string name="voice_control">Voice Control</string>
+    <string name="dark_light_theme">Dark/Light Theme</string>
 </resources> 

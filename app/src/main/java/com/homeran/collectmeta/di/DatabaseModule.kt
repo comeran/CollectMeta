@@ -2,6 +2,7 @@ package com.homeran.collectmeta.di
 
 import android.content.Context
 import com.homeran.collectmeta.data.db.AppDatabase
+import com.homeran.collectmeta.data.db.dao.ApiConfigDao
 import com.homeran.collectmeta.data.db.dao.BookDao
 import dagger.Module
 import dagger.Provides
@@ -34,5 +35,14 @@ object DatabaseModule {
     @Singleton
     fun provideBookDao(appDatabase: AppDatabase): BookDao {
         return appDatabase.bookDao()
+    }
+
+    /**
+     * 提供ApiConfigDao
+     */
+    @Provides
+    @Singleton
+    fun provideApiConfigDao(appDatabase: AppDatabase): ApiConfigDao {
+        return appDatabase.apiConfigDao()
     }
 } 

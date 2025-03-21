@@ -1,6 +1,8 @@
 package com.homeran.collectmeta.di
 
+import com.homeran.collectmeta.data.repository.ApiConfigRepositoryImpl
 import com.homeran.collectmeta.data.repository.BookRepositoryImpl
+import com.homeran.collectmeta.domain.repository.ApiConfigRepository
 import com.homeran.collectmeta.domain.repository.BookRepository
 import dagger.Binds
 import dagger.Module
@@ -24,4 +26,13 @@ abstract class RepositoryModule {
     abstract fun bindBookRepository(
         bookRepositoryImpl: BookRepositoryImpl
     ): BookRepository
+
+    /**
+     * 绑定API配置仓库实现
+     */
+    @Binds
+    @Singleton
+    abstract fun bindApiConfigRepository(
+        apiConfigRepositoryImpl: ApiConfigRepositoryImpl
+    ): ApiConfigRepository
 } 

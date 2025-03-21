@@ -6,7 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.homeran.collectmeta.data.db.converters.Converters
+import com.homeran.collectmeta.data.db.dao.ApiConfigDao
 import com.homeran.collectmeta.data.db.dao.BookDao
+import com.homeran.collectmeta.data.db.entities.ApiConfigEntity
 import com.homeran.collectmeta.data.db.entities.BookEntity
 
 /**
@@ -14,9 +16,10 @@ import com.homeran.collectmeta.data.db.entities.BookEntity
  */
 @Database(
     entities = [
-        BookEntity::class
+        BookEntity::class,
+        ApiConfigEntity::class
     ],
-    version = 1,
+    version = 3,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -26,6 +29,11 @@ abstract class AppDatabase : RoomDatabase() {
      * 书籍数据访问对象
      */
     abstract fun bookDao(): BookDao
+    
+    /**
+     * API配置数据访问对象
+     */
+    abstract fun apiConfigDao(): ApiConfigDao
 
     companion object {
         @Volatile
