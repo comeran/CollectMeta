@@ -31,17 +31,10 @@ class BookConfigFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        setupUI()
-        observeViewModel()
-        setupListeners()
-    }
-    
-    private fun setupUI() {
-        // Load any saved configuration values if they exist
+        // 从ViewModel获取配置数据
         viewModel.loadConfigValues()
-    }
-    
-    private fun observeViewModel() {
+        
+        // 观察配置数据变化
         viewModel.bookConfig.observe(viewLifecycleOwner) { config ->
             binding.notionDatabaseId.setText(config.notionDatabaseId)
             binding.openLibraryApiUrl.setText(config.openLibraryApiUrl)
@@ -49,40 +42,50 @@ class BookConfigFragment : Fragment() {
             binding.googleBooksApiKey.setText(config.googleBooksApiKey)
         }
         
+        // 观察加载状态
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            binding.saveButton.isEnabled = !isLoading
+        }
+        
+        // 观察保存成功状态
         viewModel.saveSuccess.observe(viewLifecycleOwner) { success ->
             if (success) {
-                Toast.makeText(requireContext(), "图书配置已成功保存", Toast.LENGTH_SHORT).show()
+                // 返回上一页
                 findNavController().navigateUp()
             }
         }
         
-        viewModel.error.observe(viewLifecycleOwner) { errorMessage ->
-            if (errorMessage.isNotEmpty()) {
-                Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
+        // 观察错误信息
+        viewModel.error.observe(viewLifecycleOwner) { errorMsg ->
+            if (errorMsg.isNotEmpty()) {
+                Toast.makeText(requireContext(), errorMsg, Toast.LENGTH_SHORT).show()
             }
         }
-    }
-    
-    private fun setupListeners() {
-        // Back button navigation
+        
+        // 设置保存按钮点击事件
+        binding.saveButton.setOnClickListener {
+            saveConfiguration()
+        }
+        
+        // 设置返回按钮点击事件
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
-        
-        // Save button action
-        binding.saveButton.setOnClickListener {
-            val config = BookConfig(
-                notionDatabaseId = binding.notionDatabaseId.text.toString(),
-                openLibraryApiUrl = binding.openLibraryApiUrl.text.toString(),
-                googleBooksApiUrl = binding.googleBooksApiUrl.text.toString(),
-                googleBooksApiKey = binding.googleBooksApiKey.text.toString()
-            )
-            viewModel.saveConfig(config)
-        }
+    }
+    
+    private fun saveConfiguration() {
+        val config = BookConfig(
+            notionDatabaseId = binding.notionDatabaseId.text.toString().trim(),
+            openLibraryApiUrl = binding.openLibraryApiUrl.text.toString().trim(),
+            googleBooksApiUrl = binding.googleBooksApiUrl.text.toString().trim(),
+            googleBooksApiKey = binding.googleBooksApiKey.text.toString().trim()
+        )
+        viewModel.saveConfig(config)
     }
     
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

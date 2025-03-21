@@ -32,6 +32,7 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         setupClickListeners()
+        setupFocusListeners()
         observeViewModel()
     }
     
@@ -53,25 +54,6 @@ class SettingsFragment : Fragment() {
             showToast("打开游戏配置")
         }
         
-        // Notion Integration
-        binding.notionTokenInput.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                val token = binding.notionTokenInput.text.toString()
-                if (token.isNotEmpty()) {
-                    viewModel.setNotionToken(token)
-                }
-            }
-        }
-        
-        binding.notionUrlInput.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                val url = binding.notionUrlInput.text.toString()
-                if (url.isNotEmpty()) {
-                    viewModel.setNotionUrl(url)
-                }
-            }
-        }
-        
         // App Settings
         binding.languageDropdown.setOnClickListener {
             // Toggle through available languages
@@ -91,6 +73,28 @@ class SettingsFragment : Fragment() {
             val isDarkTheme = viewModel.isDarkTheme.value ?: true
             viewModel.setTheme(!isDarkTheme)
             showToast("主题已切换为 ${if (!isDarkTheme) "浅色主题" else "深色主题"}")
+        }
+    }
+    
+    private fun setupFocusListeners() {
+        // 为Notion Token添加失焦监听
+        binding.notionTokenInput.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                val token = binding.notionTokenInput.text.toString()
+                if (token.isNotEmpty()) {
+                    viewModel.setNotionToken(token)
+                }
+            }
+        }
+        
+        // 为Notion URL添加失焦监听
+        binding.notionUrlInput.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                val url = binding.notionUrlInput.text.toString()
+                if (url.isNotEmpty()) {
+                    viewModel.setNotionUrl(url)
+                }
+            }
         }
     }
     
@@ -121,16 +125,17 @@ class SettingsFragment : Fragment() {
         // 观察保存状态
         viewModel.saveStatus.observe(viewLifecycleOwner) { status ->
             when (status) {
-                SaveStatus.SUCCESS -> {
-                    showToast("Notion 配置已保存")
-                    viewModel.resetSaveStatus()
-                }
                 SaveStatus.ERROR -> {
                     showToast("保存失败，请检查配置")
                     viewModel.resetSaveStatus()
                 }
                 else -> { /* do nothing */ }
             }
+        }
+        
+        // 观察加载状态
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
     }
     

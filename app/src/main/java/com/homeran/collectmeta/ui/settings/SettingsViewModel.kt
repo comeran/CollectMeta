@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.homeran.collectmeta.domain.model.ApiConfig
+import com.homeran.collectmeta.domain.usecase.config.GetApiConfigUseCase
 import com.homeran.collectmeta.domain.usecase.config.SaveApiConfigUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -12,7 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    private val saveApiConfigUseCase: SaveApiConfigUseCase
+    private val saveApiConfigUseCase: SaveApiConfigUseCase,
+    private val getApiConfigUseCase: GetApiConfigUseCase
 ) : ViewModel() {
     
     // App settings
@@ -32,6 +34,10 @@ class SettingsViewModel @Inject constructor(
     // 保存状态
     private val _saveStatus = MutableLiveData<SaveStatus>()
     val saveStatus: LiveData<SaveStatus> = _saveStatus
+    
+    // 加载状态
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
     
     // Media configuration states - these are simple flags to show if configurations are set up
     private val _booksConfigured = MutableLiveData<Boolean>()
@@ -57,6 +63,27 @@ class SettingsViewModel @Inject constructor(
         _tvShowsConfigured.value = false
         _gamesConfigured.value = false
         _saveStatus.value = SaveStatus.IDLE
+        _isLoading.value = false
+        
+        // 加载Notion配置
+        loadNotionConfig()
+    }
+    
+    private fun loadNotionConfig() {
+        viewModelScope.launch {
+            _isLoading.value = true
+            try {
+                val notionConfig = getApiConfigUseCase("notion")
+                notionConfig?.let {
+                    _notionToken.value = it.apiKey
+                    _notionUrl.value = it.baseUrl
+                }
+            } catch (e: Exception) {
+                _saveStatus.value = SaveStatus.ERROR
+            } finally {
+                _isLoading.value = false
+            }
+        }
     }
     
     fun setLanguage(language: String) {
