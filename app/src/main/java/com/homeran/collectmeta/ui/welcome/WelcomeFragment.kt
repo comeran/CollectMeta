@@ -28,7 +28,7 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.startButton.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomeFragment_to_searchFragment)
+            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
         }
     }
 

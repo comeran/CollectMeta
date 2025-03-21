@@ -12,6 +12,7 @@ data class ApiConfigEntity(
     /**
      * 配置唯一标识符，通常为API类型
      * 例如：
+     * - "notion" - Notion API
      * - "notion_book" - Notion书籍API
      * - "notion_movie" - Notion电影API
      * - "notion_tvshow" - Notion电视剧API

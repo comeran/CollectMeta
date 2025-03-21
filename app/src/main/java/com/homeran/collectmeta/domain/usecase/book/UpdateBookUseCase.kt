@@ -79,7 +79,7 @@ class UpdateBookUseCase @Inject constructor(
         }
         
         // 验证页数
-        book.pageCount?.let { count ->
+        book.pages?.let { count ->
             if (count < 0) {
                 throw IllegalArgumentException("Page count cannot be negative")
             }

@@ -272,8 +272,8 @@
       
       <!-- Library icon -->
       <g transform="translate(250, 20)">
-        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
-        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Library</text>
       </g>
       
       <!-- Settings icon -->
@@ -300,38 +300,38 @@
       <text x="60" y="32" font-family="Arial, sans-serif" font-size="16" fill="#A0AEC0">Atomic Habits</text>
     </g>
     
-    <!-- Results grid -->
+    <!-- Results list (replacing grid) -->
     <g transform="translate(20, 170)">
       <!-- Result 1 -->
       <g transform="translate(0, 0)">
-        <rect width="160" height="240" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-        <image x="10" y="10" width="140" height="200" xlink:href="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
-        <text x="10" y="220" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Atomic Habits</text>
-        <text x="10" y="240" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">James Clear</text>
+        <rect width="335" height="100" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <image x="10" y="10" width="60" height="80" xlink:href="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
+        <text x="85" y="40" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Atomic Habits</text>
+        <text x="85" y="70" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">James Clear</text>
       </g>
       
       <!-- Result 2 -->
-      <g transform="translate(170, 0)">
-        <rect width="160" height="240" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-        <image x="10" y="10" width="140" height="200" xlink:href="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=688&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
-        <text x="10" y="220" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">The Psychology of Money</text>
-        <text x="10" y="240" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Morgan Housel</text>
+      <g transform="translate(0, 110)">
+        <rect width="335" height="100" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <image x="10" y="10" width="60" height="80" xlink:href="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=688&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
+        <text x="85" y="40" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">The Psychology of Money</text>
+        <text x="85" y="70" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">Morgan Housel</text>
       </g>
       
       <!-- Result 3 -->
-      <g transform="translate(0, 250)">
-        <rect width="160" height="240" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-        <image x="10" y="10" width="140" height="200" xlink:href="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=749&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
-        <text x="10" y="220" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Deep Work</text>
-        <text x="10" y="240" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Cal Newport</text>
+      <g transform="translate(0, 220)">
+        <rect width="335" height="100" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <image x="10" y="10" width="60" height="80" xlink:href="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=749&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
+        <text x="85" y="40" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Deep Work</text>
+        <text x="85" y="70" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">Cal Newport</text>
       </g>
       
       <!-- Result 4 -->
-      <g transform="translate(170, 250)">
-        <rect width="160" height="240" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-        <image x="10" y="10" width="140" height="200" xlink:href="https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
-        <text x="10" y="220" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">The Alchemist</text>
-        <text x="10" y="240" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Paulo Coelho</text>
+      <g transform="translate(0, 330)">
+        <rect width="335" height="100" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <image x="10" y="10" width="60" height="80" xlink:href="https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
+        <text x="85" y="40" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">The Alchemist</text>
+        <text x="85" y="70" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">Paulo Coelho</text>
       </g>
     </g>
 
@@ -353,8 +353,8 @@
       
       <!-- Library icon -->
       <g transform="translate(250, 20)">
-        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
-        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Library</text>
       </g>
       
       <!-- Settings icon -->
@@ -374,52 +374,70 @@
     <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
     <text x="30" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Book Details</text>
     
-    <!-- Book cover -->
-    <image x="87.5" y="100" width="200" height="300" xlink:href="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
-    
-    <!-- Book title -->
-    <text x="187.5" y="420" font-family="Arial, sans-serif" font-size="24" fill="#F7FAFC" text-anchor="middle">Atomic Habits</text>
-    <text x="187.5" y="450" font-family="Arial, sans-serif" font-size="16" fill="#A0AEC0" text-anchor="middle">James Clear</text>
-    
-    <!-- Rating -->
-    <g transform="translate(137.5, 470)">
-      <use xlink:href="#icon-star" x="0" y="0" width="20" height="20" fill="#DD6B20"/>
-      <use xlink:href="#icon-star" x="25" y="0" width="20" height="20" fill="#DD6B20"/>
-      <use xlink:href="#icon-star" x="50" y="0" width="20" height="20" fill="#DD6B20"/>
-      <use xlink:href="#icon-star" x="75" y="0" width="20" height="20" fill="#DD6B20"/>
-      <use xlink:href="#icon-star" x="100" y="0" width="20" height="20" fill="#DD6B20"/>
+    <!-- Book cover (reduced size) and details layout -->
+    <g transform="translate(20, 100)">
+      <!-- Book cover -->
+      <image x="0" y="0" width="120" height="180" xlink:href="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" preserveAspectRatio="xMidYMid slice"/>
+      
+      <!-- Book details on the right side -->
+      <g transform="translate(140, 10)">
+        <!-- Book title -->
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Atomic Habits</text>
+        <text x="0" y="30" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">James Clear</text>
+        
+        <!-- Rating -->
+        <g transform="translate(0, 50)">
+          <use xlink:href="#icon-star" x="0" y="0" width="16" height="16" fill="#DD6B20"/>
+          <use xlink:href="#icon-star" x="20" y="0" width="16" height="16" fill="#DD6B20"/>
+          <use xlink:href="#icon-star" x="40" y="0" width="16" height="16" fill="#DD6B20"/>
+          <use xlink:href="#icon-star" x="60" y="0" width="16" height="16" fill="#DD6B20"/>
+          <use xlink:href="#icon-star" x="80" y="0" width="16" height="16" fill="#DD6B20"/>
+          <text x="105" y="12" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">5.0 (2.3k reviews)</text>
+        </g>
+        
+        <!-- Additional Details -->
+        <text x="0" y="80" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Published: 2018</text>
+        <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Pages: 320</text>
+        <text x="0" y="130" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Genre: Self-Help / Psychology</text>
+        <text x="0" y="155" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">ISBN: 978-0735211292</text>
+      </g>
     </g>
     
-    <!-- Stats -->
-    <g transform="translate(20, 510)">
+    <!-- Book description -->
+    <g transform="translate(20, 310)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Description</text>
+      <rect width="335" height="150" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+      <foreignObject x="15" y="15" width="305" height="120">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="color: #A0AEC0; font-family: Arial, sans-serif; font-size: 14px; margin: 0; line-height: 1.5;">
+          A supremely practical and useful book. James Clear distills the most fundamental information about habit formation, so you can accomplish more by focusing on less.
+          
+          No matter your goals, Atomic Habits offers a proven framework for improving every day.
+        </p>
+      </foreignObject>
+    </g>
+    
+    <!-- Additional Info Sections -->
+    <g transform="translate(20, 480)">
+      <!-- Key Points -->
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Key Takeaways</text>
       <rect width="335" height="100" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-      
-      <!-- Reading stats chart -->
-      <path d="M20 80 L60 60 L100 40 L140 20 L180 40 L220 60 L260 80" 
-            stroke="#DD6B20" 
-            stroke-width="2" 
-            fill="none"
-            stroke-dasharray="1000"
-            stroke-dashoffset="1000">
-        <animate attributeName="stroke-dashoffset" 
-                 from="1000" 
-                 to="0" 
-                 dur="2s" 
-                 begin="0s"/>
-      </path>
-      
-      <!-- Stats labels -->
-      <text x="20" y="95" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Jan</text>
-      <text x="100" y="95" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Mar</text>
-      <text x="180" y="95" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">May</text>
-      <text x="260" y="95" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Jul</text>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">• Small habits make a big difference</text>
+      <text x="15" y="55" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">• Focus on systems, not goals</text>
+      <text x="15" y="80" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">• Build identity-based habits</text>
     </g>
     
-    <!-- Save button -->
-    <g transform="translate(20, 630)">
-      <rect width="335" height="50" rx="25" fill="#DD6B20" filter="url(#card-shadow)"/>
-      <use xlink:href="#icon-notion" x="20" y="15" width="20" height="20" fill="#F7FAFC"/>
-      <text x="60" y="32" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Save to Notion</text>
+    <!-- Save button (centered and moved to bottom) -->
+    <g transform="translate(20, 650)">
+      <rect width="335" height="50" rx="25" fill="#DD6B20" filter="url(#card-shadow)">
+        <animate attributeName="opacity" values="1;0.8;1" dur="0.3s" begin="mouseover" fill="freeze"/>
+      </rect>
+      <g transform="translate(90, 13)">
+        <rect width="20" height="24" fill="#F7FAFC"/>
+        <rect width="16" height="3" x="2" y="6" fill="#DD6B20"/>
+        <rect width="16" height="3" x="2" y="12" fill="#DD6B20"/>
+        <rect width="16" height="3" x="2" y="18" fill="#DD6B20"/>
+      </g>
+      <text x="177.5" y="32" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC" text-anchor="middle">Save to Notion</text>
     </g>
 
     <!-- Bottom Navigation Bar -->
@@ -557,74 +575,92 @@
     <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
     <text x="30" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Settings</text>
     
-    <!-- API Configurations -->
+    <!-- Media Configurations -->
     <g transform="translate(20, 100)">
-      <!-- Notion Integration -->
-      <rect width="335" height="120" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-      <text x="20" y="30" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Integration</text>
-      <text x="20" y="50" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">Connected as: john.doe@example.com</text>
+      <text x="20" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Media Configurations</text>
       
-      <!-- Database selection -->
-      <rect x="20" y="70" width="295" height="40" rx="20" fill="#4A5568"/>
-      <text x="40" y="95" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Select Database</text>
-      <use xlink:href="#icon-chevron-right" x="280" y="75" width="20" height="20" fill="#A0AEC0"/>
+      <!-- Books Configuration -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <use xlink:href="#icon-book" x="20" y="15" width="24" height="24" fill="#DD6B20"/>
+        <text x="55" y="35" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Books Configuration</text>
+        <use xlink:href="#icon-chevron-right" x="300" y="20" width="20" height="20" fill="#A0AEC0"/>
+      </g>
+      
+      <!-- Movies Configuration -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <use xlink:href="#icon-movie" x="20" y="15" width="24" height="24" fill="#DD6B20"/>
+        <text x="55" y="35" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Movies Configuration</text>
+        <use xlink:href="#icon-chevron-right" x="300" y="20" width="20" height="20" fill="#A0AEC0"/>
+      </g>
+      
+      <!-- TV Shows Configuration -->
+      <g transform="translate(0, 175)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <use xlink:href="#icon-tv" x="20" y="15" width="24" height="24" fill="#DD6B20"/>
+        <text x="55" y="35" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">TV Shows Configuration</text>
+        <use xlink:href="#icon-chevron-right" x="300" y="20" width="20" height="20" fill="#A0AEC0"/>
+      </g>
+      
+      <!-- Games Configuration -->
+      <g transform="translate(0, 245)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <use xlink:href="#icon-game" x="20" y="15" width="24" height="24" fill="#DD6B20"/>
+        <text x="55" y="35" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Games Configuration</text>
+        <use xlink:href="#icon-chevron-right" x="300" y="20" width="20" height="20" fill="#A0AEC0"/>
+      </g>
     </g>
     
-    <!-- API Keys -->
-    <g transform="translate(20, 240)">
-      <rect width="335" height="200" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-      <text x="20" y="30" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">API Keys</text>
+    <!-- Notion Integration -->
+    <g transform="translate(20, 400)">
+      <text x="20" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Integration</text>
       
-      <!-- OpenLibrary -->
-      <g transform="translate(20, 50)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">OpenLibrary</text>
-        <rect x="0" y="20" width="295" height="40" rx="20" fill="#4A5568"/>
-        <text x="20" y="45" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">Enter API key</text>
+      <!-- Notion Token -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Notion Token</text>
+        <rect x="20" y="35" width="295" height="15" rx="2" fill="#4A5568"/>
+        <text x="25" y="47" font-family="Arial, sans-serif" font-size="10" fill="#A0AEC0">••••••••••••••••••••••••••</text>
       </g>
       
-      <!-- Google Books -->
-      <g transform="translate(20, 110)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Google Books</text>
-        <rect x="0" y="20" width="295" height="40" rx="20" fill="#4A5568"/>
-        <text x="20" y="45" font-family="Arial, sans-serif" font-size="14" fill="#A0AEC0">Enter API key</text>
+      <!-- Notion URL -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Notion Database URL</text>
+        <rect x="20" y="35" width="295" height="15" rx="2" fill="#4A5568"/>
+        <text x="25" y="47" font-family="Arial, sans-serif" font-size="10" fill="#A0AEC0">https://notion.so/workspace/Media-Library-83d2...</text>
       </g>
     </g>
     
-    <!-- Features -->
-    <g transform="translate(20, 460)">
-      <rect width="335" height="250" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
-      <text x="20" y="30" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Features</text>
+    <!-- App Settings -->
+    <g transform="translate(20, 575)">
+      <text x="20" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">App Settings</text>
       
-      <!-- Auto-sync -->
-      <g transform="translate(20, 50)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Auto-sync</text>
-        <use xlink:href="#icon-toggle-on" x="250" y="-12" width="24" height="24"/>
+      <!-- Language Settings (replacing Voice Control) with fixed positioning -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="50" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Language Settings</text>
+        <use xlink:href="#icon-voice" x="20" y="20" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown list with adjusted positioning -->
+        <g transform="translate(180, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">English</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
       </g>
       
-      <!-- Reading progress -->
-      <g transform="translate(20, 90)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track reading progress</text>
-        <use xlink:href="#icon-toggle-on" x="250" y="-12" width="24" height="24"/>
-      </g>
-      
-      <!-- Ratings -->
-      <g transform="translate(20, 130)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include ratings</text>
-        <use xlink:href="#icon-toggle-off" x="250" y="-12" width="24" height="24"/>
-      </g>
-      
-      <!-- Voice Control (New) -->
-      <g transform="translate(20, 170)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Voice Control</text>
-        <use xlink:href="#icon-voice" x="0" y="-16" width="18" height="18" fill="#A0AEC0"/>
-        <use xlink:href="#icon-toggle-on" x="250" y="-12" width="24" height="24"/>
-      </g>
-      
-      <!-- Dark/Light Theme (New) -->
-      <g transform="translate(20, 210)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Dark/Light Theme</text>
-        <use xlink:href="#icon-theme" x="0" y="-16" width="18" height="18" fill="#A0AEC0"/>
-        <use xlink:href="#icon-toggle-off" x="250" y="-12" width="24" height="24"/>
+      <!-- Theme Settings -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Dark/Light Theme</text>
+        <use xlink:href="#icon-theme" x="20" y="10" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown list instead of toggle -->
+        <g transform="translate(180, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">Dark Theme</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
       </g>
     </g>
 
@@ -782,6 +818,564 @@
       <g transform="translate(325, 20)">
         <use xlink:href="#icon-settings" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
         <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Settings</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Phone 8: Books Configuration Screen -->
+  <g transform="translate(2625, 0)">
+    <!-- Phone border -->
+    <rect x="0.5" y="0.5" width="374" height="811" rx="40" ry="40" fill="#1A202C" stroke="#333" stroke-width="1"/>
+    
+    <!-- Header with back button -->
+    <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Books Configuration</text>
+    <!-- Back button -->
+    <g transform="translate(20, 45)">
+      <path d="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z" fill="#F7FAFC"/>
+    </g>
+    
+    <!-- API Configurations -->
+    <g transform="translate(20, 100)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Database Settings</text>
+      
+      <!-- Notion Database ID -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Book Notion Database ID</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">a8b9c7d6e5f4g3h2i1j0...</text>
+      </g>
+      
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">API Settings</text>
+      
+      <!-- Open Library API URL -->
+      <g transform="translate(0, 135)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Open Library API URL</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">https://openlibrary.org/api/books</text>
+      </g>
+      
+      <!-- Google Books API URL -->
+      <g transform="translate(0, 215)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Google Books API URL</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">https://www.googleapis.com/books/v1</text>
+      </g>
+      
+      <!-- Google Books API Key -->
+      <g transform="translate(0, 295)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Google Books API Key</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">••••••••••••••••••••••••••</text>
+      </g>
+    </g>
+    
+    <!-- Book Configuration Content Preferences -->
+    <g transform="translate(20, 380)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Content Preferences</text>
+      
+      <!-- Language Preference -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Language Preference</text>
+        <use xlink:href="#icon-voice" x="285" y="20" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown -->
+        <g transform="translate(140, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">English</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
+      </g>
+      
+      <!-- Reading Progress Tracking -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track Reading Progress</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Ratings -->
+      <g transform="translate(0, 165)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Ratings</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Auto-sync -->
+      <g transform="translate(0, 225)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Auto-Sync with Notion</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Page Count -->
+      <g transform="translate(0, 285)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Page Count</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+    </g>
+    
+    <!-- Data Management -->
+    <g transform="translate(20, 675)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Data Management</text>
+      
+      <!-- Clear Cache -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Clear Books Cache</text>
+        <use xlink:href="#icon-check" x="290" y="13" width="24" height="24" fill="#DD6B20"/>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar -->
+    <g transform="translate(0, 730)">
+      <rect width="375" height="81" fill="#2D3748"/>
+      
+      <!-- Home icon -->
+      <g transform="translate(50, 20)">
+        <use xlink:href="#icon-home" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Home</text>
+      </g>
+      
+      <!-- Search icon -->
+      <g transform="translate(150, 20)">
+        <use xlink:href="#icon-search" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Search</text>
+      </g>
+      
+      <!-- Library icon -->
+      <g transform="translate(250, 20)">
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+      </g>
+      
+      <!-- Settings icon -->
+      <g transform="translate(325, 20)">
+        <use xlink:href="#icon-settings" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Settings</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Phone 9: Movies Configuration Screen -->
+  <g transform="translate(3000, 0)">
+    <!-- Phone border -->
+    <rect x="0.5" y="0.5" width="374" height="811" rx="40" ry="40" fill="#1A202C" stroke="#333" stroke-width="1"/>
+    
+    <!-- Header with back button -->
+    <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Movies Configuration</text>
+    <!-- Back button -->
+    <g transform="translate(20, 45)">
+      <path d="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z" fill="#F7FAFC"/>
+    </g>
+    
+    <!-- API Configurations -->
+    <g transform="translate(20, 100)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Database Settings</text>
+      
+      <!-- Notion Database ID -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Movie Notion Database ID</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">h2i1j0k9l8m7n6o5p4q3r2...</text>
+      </g>
+      
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">API Settings</text>
+      
+      <!-- TMDB API URL -->
+      <g transform="translate(0, 135)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">TMDB API URL</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">https://api.themoviedb.org/3</text>
+      </g>
+      
+      <!-- TMDB API Token -->
+      <g transform="translate(0, 215)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">TMDB API Token</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">••••••••••••••••••••••••••</text>
+      </g>
+    </g>
+    
+    <!-- Content Preferences -->
+    <g transform="translate(20, 300)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Content Preferences</text>
+      
+      <!-- Language Preference -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Language Preference</text>
+        <use xlink:href="#icon-voice" x="285" y="20" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown -->
+        <g transform="translate(140, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">English</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
+      </g>
+      
+      <!-- Track Watching Progress -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track Watching Progress</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Ratings -->
+      <g transform="translate(0, 165)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Ratings</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Auto-sync -->
+      <g transform="translate(0, 225)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Auto-Sync with Notion</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Runtime -->
+      <g transform="translate(0, 285)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Runtime</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Cast -->
+      <g transform="translate(0, 345)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Cast Information</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+    </g>
+    
+    <!-- Data Management -->
+    <g transform="translate(20, 675)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Data Management</text>
+      
+      <!-- Clear Cache -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Clear Movies Cache</text>
+        <use xlink:href="#icon-check" x="290" y="13" width="24" height="24" fill="#DD6B20"/>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar -->
+    <g transform="translate(0, 730)">
+      <rect width="375" height="81" fill="#2D3748"/>
+      
+      <!-- Home icon -->
+      <g transform="translate(50, 20)">
+        <use xlink:href="#icon-home" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Home</text>
+      </g>
+      
+      <!-- Search icon -->
+      <g transform="translate(150, 20)">
+        <use xlink:href="#icon-search" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Search</text>
+      </g>
+      
+      <!-- Library icon -->
+      <g transform="translate(250, 20)">
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+      </g>
+      
+      <!-- Settings icon -->
+      <g transform="translate(325, 20)">
+        <use xlink:href="#icon-settings" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Settings</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Phone 10: TV Shows Configuration Screen -->
+  <g transform="translate(3375, 0)">
+    <!-- Phone border -->
+    <rect x="0.5" y="0.5" width="374" height="811" rx="40" ry="40" fill="#1A202C" stroke="#333" stroke-width="1"/>
+    
+    <!-- Header with back button -->
+    <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">TV Shows Configuration</text>
+    <!-- Back button -->
+    <g transform="translate(20, 45)">
+      <path d="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z" fill="#F7FAFC"/>
+    </g>
+    
+    <!-- API Configurations -->
+    <g transform="translate(20, 100)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Database Settings</text>
+      
+      <!-- Notion Database ID -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">TV Notion Database ID</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">m7n6o5p4q3r2s1t0u9v8w7...</text>
+      </g>
+      
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">API Settings</text>
+      
+      <!-- TMDB API URL -->
+      <g transform="translate(0, 135)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">TMDB API URL</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">https://api.themoviedb.org/3</text>
+      </g>
+      
+      <!-- TMDB API Token -->
+      <g transform="translate(0, 215)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">TMDB API Token</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">••••••••••••••••••••••••••</text>
+      </g>
+    </g>
+    
+    <!-- Content Preferences -->
+    <g transform="translate(20, 300)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Content Preferences</text>
+      
+      <!-- Language Preference -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Language Preference</text>
+        <use xlink:href="#icon-voice" x="285" y="20" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown -->
+        <g transform="translate(140, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">English</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
+      </g>
+      
+      <!-- Track Watching Progress -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track Watching Progress</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Ratings -->
+      <g transform="translate(0, 165)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Ratings</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Auto-sync -->
+      <g transform="translate(0, 225)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Auto-Sync with Notion</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Track Episodes -->
+      <g transform="translate(0, 285)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track Episodes</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Season Info -->
+      <g transform="translate(0, 345)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Season Information</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+    </g>
+    
+    <!-- Data Management -->
+    <g transform="translate(20, 675)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Data Management</text>
+      
+      <!-- Clear Cache -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Clear TV Shows Cache</text>
+        <use xlink:href="#icon-check" x="290" y="13" width="24" height="24" fill="#DD6B20"/>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar -->
+    <g transform="translate(0, 730)">
+      <rect width="375" height="81" fill="#2D3748"/>
+      
+      <!-- Home icon -->
+      <g transform="translate(50, 20)">
+        <use xlink:href="#icon-home" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Home</text>
+      </g>
+      
+      <!-- Search icon -->
+      <g transform="translate(150, 20)">
+        <use xlink:href="#icon-search" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Search</text>
+      </g>
+      
+      <!-- Library icon -->
+      <g transform="translate(250, 20)">
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+      </g>
+      
+      <!-- Settings icon -->
+      <g transform="translate(325, 20)">
+        <use xlink:href="#icon-settings" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Settings</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Phone 11: Games Configuration Screen -->
+  <g transform="translate(3750, 0)">
+    <!-- Phone border -->
+    <rect x="0.5" y="0.5" width="374" height="811" rx="40" ry="40" fill="#1A202C" stroke="#333" stroke-width="1"/>
+    
+    <!-- Header with back button -->
+    <rect x="0" y="0" width="375" height="90" fill="#1A202C"/>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="20" fill="#F7FAFC">Games Configuration</text>
+    <!-- Back button -->
+    <g transform="translate(20, 45)">
+      <path d="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z" fill="#F7FAFC"/>
+    </g>
+    
+    <!-- API Configurations -->
+    <g transform="translate(20, 100)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Notion Database Settings</text>
+      
+      <!-- Notion Database ID -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Game Notion Database ID</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">s1t0u9v8w7x6y5z4a3b2c1...</text>
+      </g>
+      
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">API Settings</text>
+      
+      <!-- IGDB API URL -->
+      <g transform="translate(0, 135)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">IGDB API URL</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">https://api.igdb.com/v4</text>
+      </g>
+      
+      <!-- IGDB Client ID -->
+      <g transform="translate(0, 215)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">IGDB Client ID</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">••••••••••••••••••••••••••</text>
+      </g>
+      
+      <!-- IGDB Client Secret -->
+      <g transform="translate(0, 295)">
+        <rect width="335" height="70" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">IGDB Client Secret</text>
+        <rect x="20" y="35" width="295" height="25" rx="5" fill="#4A5568"/>
+        <text x="30" y="52" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0">••••••••••••••••••••••••••</text>
+      </g>
+    </g>
+    
+    <!-- Content Preferences -->
+    <g transform="translate(20, 380)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Content Preferences</text>
+      
+      <!-- Language Preference -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="60" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Language Preference</text>
+        <use xlink:href="#icon-voice" x="285" y="20" width="20" height="20" fill="#DD6B20"/>
+        <!-- Dropdown -->
+        <g transform="translate(140, 15)">
+          <rect width="130" height="30" rx="5" fill="#4A5568"/>
+          <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" fill="#F7FAFC">English</text>
+          <path d="M120,15 l-8,8 l-8,-8" stroke="#F7FAFC" stroke-width="1.5" fill="none"/>
+        </g>
+      </g>
+      
+      <!-- Track Gaming Progress -->
+      <g transform="translate(0, 105)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Track Gaming Progress</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Ratings -->
+      <g transform="translate(0, 165)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Ratings</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Auto-sync -->
+      <g transform="translate(0, 225)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Auto-Sync with Notion</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+      
+      <!-- Include Platforms -->
+      <g transform="translate(0, 285)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Include Platforms</text>
+        <use xlink:href="#icon-toggle-on" x="290" y="13" width="24" height="24"/>
+      </g>
+    </g>
+    
+    <!-- Data Management -->
+    <g transform="translate(20, 675)">
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#F7FAFC">Data Management</text>
+      
+      <!-- Clear Cache -->
+      <g transform="translate(0, 35)">
+        <rect width="335" height="50" rx="10" fill="#2D3748" filter="url(#card-shadow)"/>
+        <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#F7FAFC">Clear Games Cache</text>
+        <use xlink:href="#icon-check" x="290" y="13" width="24" height="24" fill="#DD6B20"/>
+      </g>
+    </g>
+
+    <!-- Bottom Navigation Bar -->
+    <g transform="translate(0, 730)">
+      <rect width="375" height="81" fill="#2D3748"/>
+      
+      <!-- Home icon -->
+      <g transform="translate(50, 20)">
+        <use xlink:href="#icon-home" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Home</text>
+      </g>
+      
+      <!-- Search icon -->
+      <g transform="translate(150, 20)">
+        <use xlink:href="#icon-search" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Search</text>
+      </g>
+      
+      <!-- Library icon -->
+      <g transform="translate(250, 20)">
+        <use xlink:href="#icon-library" x="0" y="0" width="24" height="24" fill="#A0AEC0"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A0AEC0" text-anchor="middle">Library</text>
+      </g>
+      
+      <!-- Settings icon -->
+      <g transform="translate(325, 20)">
+        <use xlink:href="#icon-settings" x="0" y="0" width="24" height="24" fill="#DD6B20"/>
+        <text x="12" y="40" font-family="Arial, sans-serif" font-size="12" fill="#DD6B20" text-anchor="middle">Settings</text>
       </g>
     </g>
   </g>

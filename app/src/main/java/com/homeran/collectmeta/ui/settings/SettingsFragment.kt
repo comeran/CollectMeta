@@ -4,16 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.homeran.collectmeta.R
 import com.homeran.collectmeta.databinding.FragmentSettingsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SettingsFragment : Fragment() {
-
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
+    
     private val viewModel: SettingsViewModel by viewModels()
 
     override fun onCreateView(
@@ -27,77 +30,112 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupViews()
+        
+        setupClickListeners()
         observeViewModel()
     }
-
-    private fun setupViews() {
-        // Database Selection
-        binding.btnSelectDatabase.setOnClickListener {
-            // TODO: Show database selection dialog
+    
+    private fun setupClickListeners() {
+        // Media Configurations
+        binding.booksConfig.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_settings_to_bookConfigFragment)
         }
-
-        // API Keys
-        binding.etOpenLibraryKey.setOnFocusChangeListener { _, hasFocus ->
+        
+        binding.moviesConfig.setOnClickListener {
+            showToast("打开电影配置")
+        }
+        
+        binding.tvShowsConfig.setOnClickListener {
+            showToast("打开电视节目配置")
+        }
+        
+        binding.gamesConfig.setOnClickListener {
+            showToast("打开游戏配置")
+        }
+        
+        // Notion Integration
+        binding.notionTokenInput.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
-                viewModel.saveOpenLibraryKey(binding.etOpenLibraryKey.text.toString())
+                val token = binding.notionTokenInput.text.toString()
+                if (token.isNotEmpty()) {
+                    viewModel.setNotionToken(token)
+                }
             }
         }
-
-        binding.etGoogleBooksKey.setOnFocusChangeListener { _, hasFocus ->
+        
+        binding.notionUrlInput.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
-                viewModel.saveGoogleBooksKey(binding.etGoogleBooksKey.text.toString())
+                val url = binding.notionUrlInput.text.toString()
+                if (url.isNotEmpty()) {
+                    viewModel.setNotionUrl(url)
+                }
             }
         }
-
-        // Features
-        binding.switchAutoSync.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setAutoSync(isChecked)
+        
+        // App Settings
+        binding.languageDropdown.setOnClickListener {
+            // Toggle through available languages
+            val currentLanguage = viewModel.language.value ?: "English"
+            val nextLanguage = when (currentLanguage) {
+                "English" -> "中文"
+                "中文" -> "日本語"
+                "日本語" -> "Español"
+                else -> "English"
+            }
+            viewModel.setLanguage(nextLanguage)
+            showToast("语言已切换为 $nextLanguage")
         }
-
-        binding.switchReadingProgress.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setTrackReadingProgress(isChecked)
-        }
-
-        binding.switchRatings.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setIncludeRatings(isChecked)
-        }
-
-        binding.switchVoiceControl.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setVoiceControl(isChecked)
-        }
-
-        binding.switchTheme.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setDarkTheme(isChecked)
+        
+        binding.themeDropdown.setOnClickListener {
+            // Toggle between dark and light theme
+            val isDarkTheme = viewModel.isDarkTheme.value ?: true
+            viewModel.setTheme(!isDarkTheme)
+            showToast("主题已切换为 ${if (!isDarkTheme) "浅色主题" else "深色主题"}")
         }
     }
-
+    
     private fun observeViewModel() {
-        viewModel.settings.observe(viewLifecycleOwner) { settings ->
-            updateSettings(settings)
+        // Observe language changes
+        viewModel.language.observe(viewLifecycleOwner) { language ->
+            binding.languageValue.text = language
         }
-
-        viewModel.notionUser.observe(viewLifecycleOwner) { user ->
-            updateNotionUser(user)
+        
+        // Observe theme changes
+        viewModel.isDarkTheme.observe(viewLifecycleOwner) { isDarkTheme ->
+            binding.themeValue.text = if (isDarkTheme) "Dark Theme" else "Light Theme"
+        }
+        
+        // Observe Notion integration data
+        viewModel.notionToken.observe(viewLifecycleOwner) { token ->
+            if (token.isNotEmpty() && binding.notionTokenInput.text.toString() != token) {
+                binding.notionTokenInput.setText(token)
+            }
+        }
+        
+        viewModel.notionUrl.observe(viewLifecycleOwner) { url ->
+            if (url.isNotEmpty() && binding.notionUrlInput.text.toString() != url) {
+                binding.notionUrlInput.setText(url)
+            }
+        }
+        
+        // 观察保存状态
+        viewModel.saveStatus.observe(viewLifecycleOwner) { status ->
+            when (status) {
+                SaveStatus.SUCCESS -> {
+                    showToast("Notion 配置已保存")
+                    viewModel.resetSaveStatus()
+                }
+                SaveStatus.ERROR -> {
+                    showToast("保存失败，请检查配置")
+                    viewModel.resetSaveStatus()
+                }
+                else -> { /* do nothing */ }
+            }
         }
     }
-
-    private fun updateSettings(settings: Settings) {
-        // Animate settings updates
-        val fadeIn = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in)
-        binding.root.startAnimation(fadeIn)
-
-        binding.switchAutoSync.isChecked = settings.autoSync
-        binding.switchReadingProgress.isChecked = settings.trackReadingProgress
-        binding.switchRatings.isChecked = settings.includeRatings
-        binding.switchVoiceControl.isChecked = settings.voiceControl
-        binding.switchTheme.isChecked = settings.darkTheme
-    }
-
-    private fun updateNotionUser(user: NotionUser?) {
-        user?.let {
-            binding.tvConnectedAs.text = getString(R.string.connected_as, it.email)
-        }
+    
+    private fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {

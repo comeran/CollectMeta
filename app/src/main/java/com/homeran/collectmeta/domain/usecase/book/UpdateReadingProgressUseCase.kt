@@ -46,7 +46,7 @@ class UpdateReadingProgressUseCase @Inject constructor(
         }
 
         // 验证当前页码不能超过总页数
-        book.pageCount?.let { totalPages ->
+        book.pages?.let { totalPages ->
             if (currentPage > totalPages) {
                 throw IllegalArgumentException("Current page cannot exceed total pages")
             }
@@ -59,7 +59,7 @@ class UpdateReadingProgressUseCase @Inject constructor(
     private fun determineReadingStatus(book: Book, currentPage: Int): ReadingStatus {
         return when {
             currentPage == 0 -> ReadingStatus.WANT_TO_READ
-            currentPage < (book.pageCount ?: Int.MAX_VALUE) -> ReadingStatus.READING
+            currentPage < (book.pages ?: Int.MAX_VALUE) -> ReadingStatus.READING
             else -> ReadingStatus.READ
         }
     }

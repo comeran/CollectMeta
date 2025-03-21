@@ -88,5 +88,8 @@ data class BookEntity(
     val publishDate: String?,
     
     @ColumnInfo(name = "last_modified")
-    val lastModified: Long
+    val lastModified: Long,
+    
+    @ColumnInfo(name = "is_saved")
+    val isSaved: Boolean = false
 ) 

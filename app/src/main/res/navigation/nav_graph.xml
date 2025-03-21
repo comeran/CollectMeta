@@ -1,55 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/searchFragment">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.homeran.collectmeta.ui.search.SearchFragment"
-        android:label="@string/search"
-        tools:layout="@layout/fragment_search">
+        android:id="@+id/welcomeFragment"
+        android:name="com.homeran.collectmeta.ui.welcome.WelcomeFragment"
+        android:label="WelcomeFragment">
         <action
-            android:id="@+id/action_searchFragment_to_searchResultsFragment"
-            app:destination="@id/searchResultsFragment" />
-        <action
-            android:id="@+id/action_searchFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_searchFragment_to_libraryFragment"
-            app:destination="@id/libraryFragment" />
-        <action
-            android:id="@+id/action_searchFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
     </fragment>
-    
+
     <fragment
-        android:id="@+id/searchResultsFragment"
-        android:name="com.homeran.collectmeta.ui.search.SearchResultsFragment"
-        android:label="@string/search_results"
-        tools:layout="@layout/fragment_search_results">
-        <argument
-            android:name="searchQuery"
-            app:argType="string" />
-    </fragment>
-    
-    <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/navigation_home"
         android:name="com.homeran.collectmeta.ui.home.HomeFragment"
-        android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
-    
+        android:label="HomeFragment" />
+
     <fragment
-        android:id="@+id/libraryFragment"
+        android:id="@+id/navigation_search"
+        android:name="com.homeran.collectmeta.ui.search.SearchFragment"
+        android:label="SearchFragment" />
+
+    <fragment
+        android:id="@+id/navigation_library"
         android:name="com.homeran.collectmeta.ui.library.LibraryFragment"
-        android:label="@string/library"
-        tools:layout="@layout/fragment_library" />
-    
+        android:label="LibraryFragment" />
+
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/navigation_settings"
         android:name="com.homeran.collectmeta.ui.settings.SettingsFragment"
-        android:label="@string/settings"
-        tools:layout="@layout/fragment_settings" />
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_navigation_settings_to_bookConfigFragment"
+            app:destination="@id/bookConfigFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookConfigFragment"
+        android:name="com.homeran.collectmeta.ui.book.BookConfigFragment"
+        android:label="BookConfigFragment" />
 
 </navigation> 

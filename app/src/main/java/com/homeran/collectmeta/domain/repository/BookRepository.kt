@@ -88,4 +88,9 @@ interface BookRepository {
      * 获取已读的书籍数量
      */
     fun getReadCount(): Flow<Int>
+
+    /**
+     * 更新书籍是否已保存到Notion
+     */
+    suspend fun updateBookSavedStatus(id: String, isSaved: Boolean)
 } 

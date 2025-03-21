@@ -215,6 +215,24 @@ class BookRepositoryImpl @Inject constructor(
         return bookDao.getReadCount()
     }
 
+    override suspend fun updateBookSavedStatus(id: String, isSaved: Boolean) {
+        try {
+            Log.d(TAG, "Updating book saved status: $id to $isSaved")
+            // 检查书籍是否存在
+            if (bookDao.getBookById(id) == null) {
+                throw BookNotFoundException(id)
+            }
+            
+            bookDao.updateSavedStatus(id, isSaved)
+            Log.d(TAG, "Successfully updated book saved status: $id to $isSaved")
+        } catch (e: BookNotFoundException) {
+            throw e
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to update book saved status: $id to $isSaved", e)
+            throw BookSaveException(e.message ?: "Unknown error")
+        }
+    }
+
     /**
      * 验证书籍数据
      */
@@ -252,7 +270,7 @@ class BookRepositoryImpl @Inject constructor(
         }
         
         // 验证页数
-        book.pageCount?.let { count ->
+        book.pages?.let { count ->
             if (count < 0) {
                 throw IllegalArgumentException("Page count cannot be negative")
             }

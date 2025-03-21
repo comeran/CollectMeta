@@ -22,7 +22,7 @@ class UpdateReadingStatusUseCase @Inject constructor(
                 ?: throw BookNotFoundException(parameters.bookId)
 
             // 验证状态转换是否有效
-            validateStatusTransition(book.readingStatus, parameters.newStatus)
+            validateStatusTransition(book.status, parameters.newStatus)
 
             // 更新阅读状态
             bookRepository.updateBookStatus(parameters.bookId, parameters.newStatus)

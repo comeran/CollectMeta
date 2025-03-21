@@ -4,103 +4,139 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.homeran.collectmeta.domain.model.ApiConfig
+import com.homeran.collectmeta.domain.usecase.config.SaveApiConfigUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SettingsViewModel : ViewModel() {
-
-    private val _settings = MutableLiveData<Settings>()
-    val settings: LiveData<Settings> = _settings
-
-    private val _notionUser = MutableLiveData<NotionUser?>()
-    val notionUser: LiveData<NotionUser?> = _notionUser
-
+@HiltViewModel
+class SettingsViewModel @Inject constructor(
+    private val saveApiConfigUseCase: SaveApiConfigUseCase
+) : ViewModel() {
+    
+    // App settings
+    private val _language = MutableLiveData<String>()
+    val language: LiveData<String> = _language
+    
+    private val _isDarkTheme = MutableLiveData<Boolean>()
+    val isDarkTheme: LiveData<Boolean> = _isDarkTheme
+    
+    // Notion integration
+    private val _notionToken = MutableLiveData<String>()
+    val notionToken: LiveData<String> = _notionToken
+    
+    private val _notionUrl = MutableLiveData<String>()
+    val notionUrl: LiveData<String> = _notionUrl
+    
+    // 保存状态
+    private val _saveStatus = MutableLiveData<SaveStatus>()
+    val saveStatus: LiveData<SaveStatus> = _saveStatus
+    
+    // Media configuration states - these are simple flags to show if configurations are set up
+    private val _booksConfigured = MutableLiveData<Boolean>()
+    val booksConfigured: LiveData<Boolean> = _booksConfigured
+    
+    private val _moviesConfigured = MutableLiveData<Boolean>()
+    val moviesConfigured: LiveData<Boolean> = _moviesConfigured
+    
+    private val _tvShowsConfigured = MutableLiveData<Boolean>()
+    val tvShowsConfigured: LiveData<Boolean> = _tvShowsConfigured
+    
+    private val _gamesConfigured = MutableLiveData<Boolean>()
+    val gamesConfigured: LiveData<Boolean> = _gamesConfigured
+    
     init {
-        loadSettings()
-        loadNotionUser()
+        // Set default values
+        _language.value = "English"
+        _isDarkTheme.value = true
+        _notionToken.value = ""
+        _notionUrl.value = ""
+        _booksConfigured.value = false
+        _moviesConfigured.value = false
+        _tvShowsConfigured.value = false
+        _gamesConfigured.value = false
+        _saveStatus.value = SaveStatus.IDLE
     }
-
-    private fun loadSettings() {
+    
+    fun setLanguage(language: String) {
+        _language.value = language
+        // In a real app, this should save to preferences
+    }
+    
+    fun setTheme(isDarkTheme: Boolean) {
+        _isDarkTheme.value = isDarkTheme
+        // In a real app, this should save to preferences and apply theme
+    }
+    
+    fun setNotionToken(token: String) {
+        _notionToken.value = token
         viewModelScope.launch {
-            // TODO: Load settings from DataStore
-            _settings.value = Settings(
-                autoSync = true,
-                trackReadingProgress = true,
-                includeRatings = false,
-                voiceControl = true,
-                darkTheme = true
-            )
+            try {
+                saveApiConfigUseCase.updateApiKey("notion", token)
+                _saveStatus.value = SaveStatus.SUCCESS
+            } catch (e: Exception) {
+                _saveStatus.value = SaveStatus.ERROR
+            }
         }
     }
-
-    private fun loadNotionUser() {
+    
+    fun setNotionUrl(url: String) {
+        _notionUrl.value = url
+        saveNotionConfig()
+    }
+    
+    private fun saveNotionConfig() {
         viewModelScope.launch {
-            // TODO: Load Notion user from DataStore
-            _notionUser.value = NotionUser(
-                id = "1",
-                email = "user@example.com",
-                name = "John Doe"
-            )
+            try {
+                val token = _notionToken.value ?: ""
+                val url = _notionUrl.value ?: ""
+                
+                if (token.isNotBlank() && url.isNotBlank()) {
+                    val apiConfig = ApiConfig(
+                        configId = "notion",
+                        apiKey = token,
+                        isEnabled = true,
+                        baseUrl = url,
+                        param1 = null,
+                        param2 = null,
+                        param3 = null,
+                        param4 = null,
+                        param5 = null,
+                        lastUpdated = System.currentTimeMillis()
+                    )
+                    saveApiConfigUseCase(apiConfig)
+                    _saveStatus.value = SaveStatus.SUCCESS
+                }
+            } catch (e: Exception) {
+                _saveStatus.value = SaveStatus.ERROR
+            }
         }
     }
-
-    fun saveOpenLibraryKey(key: String) {
-        viewModelScope.launch {
-            // TODO: Save API key to DataStore
-        }
+    
+    fun saveAllNotionSettings() {
+        saveNotionConfig()
     }
-
-    fun saveGoogleBooksKey(key: String) {
-        viewModelScope.launch {
-            // TODO: Save API key to DataStore
-        }
+    
+    fun resetSaveStatus() {
+        _saveStatus.value = SaveStatus.IDLE
     }
-
-    fun setAutoSync(enabled: Boolean) {
-        viewModelScope.launch {
-            // TODO: Save setting to DataStore
-            _settings.value = _settings.value?.copy(autoSync = enabled)
+    
+    fun setMediaConfigured(type: MediaType, isConfigured: Boolean) {
+        when (type) {
+            MediaType.BOOKS -> _booksConfigured.value = isConfigured
+            MediaType.MOVIES -> _moviesConfigured.value = isConfigured
+            MediaType.TV_SHOWS -> _tvShowsConfigured.value = isConfigured
+            MediaType.GAMES -> _gamesConfigured.value = isConfigured
         }
-    }
-
-    fun setTrackReadingProgress(enabled: Boolean) {
-        viewModelScope.launch {
-            // TODO: Save setting to DataStore
-            _settings.value = _settings.value?.copy(trackReadingProgress = enabled)
-        }
-    }
-
-    fun setIncludeRatings(enabled: Boolean) {
-        viewModelScope.launch {
-            // TODO: Save setting to DataStore
-            _settings.value = _settings.value?.copy(includeRatings = enabled)
-        }
-    }
-
-    fun setVoiceControl(enabled: Boolean) {
-        viewModelScope.launch {
-            // TODO: Save setting to DataStore
-            _settings.value = _settings.value?.copy(voiceControl = enabled)
-        }
-    }
-
-    fun setDarkTheme(enabled: Boolean) {
-        viewModelScope.launch {
-            // TODO: Save setting to DataStore
-            _settings.value = _settings.value?.copy(darkTheme = enabled)
-        }
+        // In a real app, this should save to preferences
     }
 }
 
-data class Settings(
-    val autoSync: Boolean,
-    val trackReadingProgress: Boolean,
-    val includeRatings: Boolean,
-    val voiceControl: Boolean,
-    val darkTheme: Boolean
-)
+enum class MediaType {
+    BOOKS, MOVIES, TV_SHOWS, GAMES
+}
 
-data class NotionUser(
-    val id: String,
-    val email: String,
-    val name: String
-) 
+enum class SaveStatus {
+    IDLE, SUCCESS, ERROR
+} 

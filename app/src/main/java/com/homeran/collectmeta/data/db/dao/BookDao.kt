@@ -111,4 +111,22 @@ interface BookDao {
      */
     @Query("SELECT COUNT(id) FROM books WHERE status = 'READ'")
     fun getReadCount(): Flow<Int>
+
+    /**
+     * 获取已保存的书籍
+     */
+    @Query("SELECT * FROM books WHERE is_saved = 1")
+    fun getSavedBooks(): Flow<List<BookEntity>>
+
+    /**
+     * 更新书籍保存状态
+     */
+    @Query("UPDATE books SET is_saved = :isSaved WHERE id = :id")
+    suspend fun updateSavedStatus(id: String, isSaved: Boolean)
+
+    /**
+     * 获取指定状态且已保存的书籍
+     */
+    @Query("SELECT * FROM books WHERE status = :status AND is_saved = 1")
+    fun getSavedBooksByStatus(status: ReadingStatus): Flow<List<BookEntity>>
 } 
