@@ -2,7 +2,7 @@ package com.homeran.collectmeta.domain.usecase.config
 
 import com.homeran.collectmeta.domain.model.ApiConfig
 import com.homeran.collectmeta.domain.repository.ApiConfigRepository
-import com.homeran.collectmeta.data.repository.ApiConfigRepositoryImpl
+import com.homeran.collectmeta.data.repository.ApiConfigRepositoryImpl.Companion.GOOGLE_BOOKS_CONFIG_ID
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -23,7 +23,7 @@ class GoogleBooksConfigUseCase @Inject constructor(
      * 获取Google Books API配置（流）
      */
     fun asFlow(): Flow<ApiConfig?> {
-        return apiConfigRepository.getConfigByIdAsFlow(ApiConfigRepositoryImpl.GOOGLE_BOOKS_CONFIG_ID)
+        return apiConfigRepository.getConfigByIdAsFlow(GOOGLE_BOOKS_CONFIG_ID)
     }
 
     /**

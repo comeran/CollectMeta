@@ -45,9 +45,57 @@ interface BookRepository {
     fun searchBooksByPublisher(publisher: String): Flow<List<Book>>
 
     /**
-     * 保存/更新书籍
+     * 从Google Books API搜索书籍
      */
-    suspend fun saveBook(book: Book)
+    suspend fun searchGoogleBooks(
+        query: String,
+        apiKey: String = "",
+        baseUrl: String,
+        maxResults: Int = 20,
+        startIndex: Int = 0
+    ): Flow<List<Book>>
+    
+    /**
+     * 从OpenLibrary API搜索书籍
+     */
+    suspend fun searchOpenLibraryBooks(
+        query: String,
+        searchField: String,
+        baseUrl: String,
+        limit: Int = 20,
+        page: Int = 1
+    ): Flow<List<Book>>
+    
+    /**
+     * 从Google Books获取书籍详情
+     */
+    suspend fun getGoogleBookDetails(
+        bookId: String,
+        apiKey: String = "",
+        baseUrl: String
+    ): Book?
+    
+    /**
+     * 从OpenLibrary获取书籍详情
+     */
+    suspend fun getOpenLibraryBookDetails(
+        bookId: String,
+        baseUrl: String
+    ): Book?
+
+    /**
+     * 通过ISBN从OpenLibrary获取书籍详情
+     */
+    suspend fun getOpenLibraryBookByIsbn(
+        isbn: String,
+        baseUrl: String
+    ): Book?
+
+    /**
+     * 保存/更新书籍
+     * @return 保存后的书籍
+     */
+    suspend fun saveBook(book: Book): Book
 
     /**
      * 批量保存书籍

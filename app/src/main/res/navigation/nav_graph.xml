@@ -16,12 +16,24 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.homeran.collectmeta.ui.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.homeran.collectmeta.ui.search.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="SearchFragment">
+        <argument
+            android:name="mediaType"
+            app:argType="string"
+            android:defaultValue="books" />
+        <action
+            android:id="@+id/action_searchFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_library"
@@ -41,5 +53,18 @@
         android:id="@+id/bookConfigFragment"
         android:name="com.homeran.collectmeta.ui.book.BookConfigFragment"
         android:label="BookConfigFragment" />
+
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.homeran.collectmeta.ui.detail.BookDetailFragment"
+        android:label="BookDetailFragment">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            app:argType="string"
+            android:defaultValue="local" />
+    </fragment>
 
 </navigation> 

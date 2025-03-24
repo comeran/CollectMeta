@@ -49,8 +49,12 @@ class HomeFragment : Fragment() {
             resetCardColors(defaultColor)
             binding.cardBooks.setCardBackgroundColor(selectedColor)
             viewModel.setSelectedCategory("books")
-            // 导航到搜索页面
-            findNavController().navigate(R.id.navigation_search)
+            
+            // 使用Bundle传递媒体类型参数
+            val bundle = Bundle().apply {
+                putString("mediaType", "books")
+            }
+            findNavController().navigate(R.id.action_navigation_home_to_navigation_search, bundle)
         }
         
         binding.cardMovies.setOnClickListener {
